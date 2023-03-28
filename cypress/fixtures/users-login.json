@@ -2,7 +2,8 @@
     "success": {
         "name": "Amanda",
         "email": "amanda.galiano@hotmail.com",
-        "password": "man030990"
+        "password": "man030990",
+        "is_shaver": false
     },
     "invpass": {
         "email": "amanda.galiano@hotmail.com",
