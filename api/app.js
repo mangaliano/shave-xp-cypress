@@ -10,9 +10,8 @@ const app = express()
 
 app.use(express.json())
 
-const { deleteUser, insertUser } = require('./db')
+const { deleteUser, insertUser, findToken } = require('./db')
 
-// implementação da validação
 const userSchema = Joi.object({
     name: Joi.string().required(),
     email: Joi.string().email().required(),
@@ -24,15 +23,24 @@ app.get('/welcome', function (req, res) {
     res.json({ message: 'Ola QAx' })
 })
 
+app.get('/token/:email', async function (req, res) {
+    const { email } = req.params
+    const token = await findToken(email)
+
+    if (!token) {
+        return res.status(404).end()
+    }
+
+    res.status(200).json(token)
+})
+
 app.delete('/user/:email', async function (req, res) {
-    //console.log(req.params)
     const { email } = req.params
     await deleteUser(email)
     res.status(204).end()
 })
 
 app.post('/user', validator.body(userSchema), async function (req, res) {
-
     const { name, email, password, is_shaver } = req.body
     const hashPass = await bcrypt.hash(password, 8)
 
@@ -42,11 +50,6 @@ app.post('/user', validator.body(userSchema), async function (req, res) {
         password: hashPass,
         is_shaver: is_shaver
     }
-
-    // ESSA ESTRATÉGIA DE VALIDAÇÃO NÃO FUNCIONOU DEVIDO O CAMPO is_shaver SER DO TIPO booleano
-    //if (!user.name || !user.email || !user.password || !user.is_shaver) {
-    //    return res.status(400).json({message: 'Every field is mandatory.'})
-    //}
 
     console.log(user)
 
@@ -58,6 +61,7 @@ app.post('/user', validator.body(userSchema), async function (req, res) {
     } catch (error) {
         res.status(500).json({ error: 'Ocorreu um erro.', stack: error })
     }
+
 
 })
 

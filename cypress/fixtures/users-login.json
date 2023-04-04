@@ -1,6 +1,6 @@
 {
     "success": {
-        "name": "Amanda",
+        "name": "Amanda Galiano",
         "email": "amanda.galiano@hotmail.com",
         "password": "man030990",
         "is_shaver": false
@@ -10,7 +10,7 @@
         "password": "abc123"
     },
     "email404": {
-        "email": "amanda.galiano@hotmail.com",
+        "email": "amanda.galiano@404.com",
         "password": "abc123"
     },
     "shortpass": [
