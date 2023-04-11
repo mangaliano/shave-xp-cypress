@@ -1,6 +1,6 @@
 const { Pool } = require('pg')
 
-const dbconfig = {
+const dbConfig = {
     host: 'motty.db.elephantsql.com',
     user: 'ukbujbtu',
     password: '7fUiN6lhwUvC7vnAKbYvSMGxxlVWtwpQ',
