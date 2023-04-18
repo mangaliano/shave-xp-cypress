@@ -1,0 +1,15 @@
+{
+    "customer": {
+        "name": "Tiago Projota",
+        "email": "tiago@yahoo.com.br",
+        "password": "man030990",
+        "is_shaver": false                
+    },
+    "shaver": {
+        "name": "Jeremy Adams"
+    },
+    "service": {
+        "description": "Corte de cabelo",
+        "price": "79,99"
+    }
+}
