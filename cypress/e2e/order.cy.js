@@ -1,8 +1,8 @@
 
-import loginPage from '../support/pages/login'
-import shaversPage from '../support/pages/shavers'
-import catalogPage from '../support/pages/catalog'
-import orderPage from '../support/pages/order'
+//import loginPage from '../support/pages/login'
+import shaversPage from '../support/pages/views/shavers'
+import catalogPage from '../support/pages/views/catalog'
+import orderPage from '../support/pages/views/order'
 
 import data from '../fixtures/order.json'
 

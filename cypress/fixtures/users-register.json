@@ -1,0 +1,31 @@
+{
+    "success": {
+        "name": "Leandro Emicida",
+        "email": "leandro@gmail.com",
+        "password": "man030990",
+        "is_shaver": false
+    },
+    "sameEmail": {
+        "name": "Michael Rashid",
+        "email": "michael@outlook.com",
+        "password": "man030990",
+        "is_shaver": false
+    },
+    "shortpass": [
+        "1",
+        "12",
+        "123",
+        "1234",
+        "12345"
+    ],
+    "invemails": [
+        "amanda&gmail.com",
+        "amanda.com.br",
+        "@gmail.com",
+        "@",
+        "amanda@",
+        "12314523",
+        "$#%#)&%)#&",
+        "xpto123"
+    ]
+}
